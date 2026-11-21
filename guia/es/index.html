@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>UGC Seedance 2.5 — anuncio UGC one-take de 30 s con IA</title>
+<meta content="Skill Claude Code + generador de briefs: un producto se convierte en los 3 prompts (producto, creator, video) de la receta Seedance 2.5 UGC Ads, adaptada para Magnific, Higgsfield y fal.ai." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --bg:#0c0c10; --bg2:#14141b; --card:#16161e; --line:#272730;
+    --txt:#e9e9ee; --mut:#9a9aa6; --amb:#E2A23B; --amb2:#f0c070; --sky:#38bdf8; --pro:#cbd5e1;
+    color-scheme:dark;
+  }
+  body.light{
+    --bg:#f6f7f9; --bg2:#eceef2; --card:#ffffff; --line:#e1e3ea;
+    --txt:#1a1a22; --mut:#5b5b68; --amb:#b9791d; --amb2:#a16207; --sky:#0369a1; --pro:#b45309;
+    color-scheme:light;
+  }
+  body.light .hero .glow{opacity:.5}
+  body.light pre{background:#0e0e14;color:#d6d6e0}
+  body.light pre .c{color:#8a8a98}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15;margin:0}
+  a{color:var(--amb);text-decoration:none}
+  code,pre{font-family:"JetBrains Mono",monospace}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .mut{color:var(--mut)} .amb{color:var(--amb)}
+  .chip{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);font-weight:600;font-family:Sora}
+  nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:rgba(12,12,16,.78);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+  nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:800;letter-spacing:-.02em;color:var(--amb)}
+  nav .brand .emoji{font-size:1.25rem}
+  nav .sep{color:var(--mut);opacity:.45}
+  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .inema:hover{filter:brightness(1.15)}
+  nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .pro:hover{filter:brightness(1.15)}
+  nav .clubpro{display:inline-flex;align-items:center;gap:6px}
+  nav .links{margin-left:auto;display:flex;align-items:center;gap:20px;font-size:.92rem}
+  nav .links a.sec{color:var(--mut)} nav .links a.sec:hover{color:var(--txt)}
+  .tgl{background:var(--bg2);border:1px solid var(--line);color:var(--txt);width:38px;height:38px;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:1.05rem}
+  .tgl:hover{border-color:var(--amb)}
+  .btn{display:inline-block;background:var(--amb);color:#1a1206;font-weight:600;padding:.6em 1.05em;border-radius:10px;font-family:Sora}
+  .btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  @media(max-width:760px){nav .links a.sec{display:none}}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .glow{position:absolute;inset:-40% -20% auto auto;width:70%;height:600px;background:radial-gradient(closest-side,rgba(226,162,59,.22),transparent 70%);pointer-events:none}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:74px 22px}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.025em}
+  .hero p.lead{font-size:1.18rem;color:var(--mut);margin:1.1em 0 1.6em;max-width:34ch}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000}
+  .hero figure img{width:100%;display:block}
+  @media(max-width:780px){.hero .wrap{grid-template-columns:1fr;padding:48px 22px}}
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em}
+  section .sub{color:var(--mut);margin:.6em 0 2em;max-width:62ch}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:820px){.g3,.g4{grid-template-columns:1fr 1fr}}
+  @media(max-width:540px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card h3{font-size:1.05rem;margin-bottom:.4em}
+  .card p{color:var(--mut);font-size:.92rem;margin:0}
+  .num{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;border-radius:8px;background:rgba(226,162,59,.14);color:var(--amb);font-family:Sora;font-weight:800;font-size:.9rem;margin-bottom:.7em}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+  .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.85rem;font-family:Sora;font-weight:600}
+  .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0}
+  pre .c{color:#6f6f7c} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
+  .step{display:grid;grid-template-columns:46px 1fr;gap:16px;margin-bottom:26px}
+  .step .b{width:46px;height:46px;border-radius:12px;background:var(--amb);color:#1a1206;font-family:Sora;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:1.12rem;margin-bottom:.3em}
+  .step p{color:var(--mut);margin:.2em 0 .7em}
+  .ex{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:680px){.ex{grid-template-columns:1fr}}
+  .ex figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .ex figure img{width:100%;display:block}
+  .ex figcaption{padding:12px 14px;font-size:.88rem;color:var(--mut);background:var(--card)}
+  .phase{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .phase:last-child{border:none}
+  .phase .tag{flex:0 0 92px;font-family:Sora;font-weight:800;color:var(--amb)}
+  .phase .d strong{display:block;margin-bottom:.2em}
+  .phase .d span{color:var(--mut);font-size:.92rem}
+  footer{padding:46px 0;text-align:center;color:var(--mut);font-size:.9rem}
+  .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.3em .8em;font-size:.78rem;color:var(--mut);margin:0 4px}
+  table{width:100%;border-collapse:collapse;font-size:.9rem}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--amb);font-family:Sora;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase}
+  td:first-child{white-space:nowrap;font-family:"JetBrains Mono",monospace;color:var(--amb2)}
+</style>
+<link href="https://inematds.github.io/ugc-seedance25/guia/" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/ugc-seedance25/guia/en/" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/ugc-seedance25/guia/es/" hreflang="es" rel="alternate"/></head>
+<body><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="../en/" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="./" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">ES</a></div>
+<nav><div class="wrap">
+<a class="brand" href="#top"><span class="emoji">🎬</span> UGC Seedance 2.5</a>
+<span class="sep">|</span>
+<span class="clubpro">
+<a class="inema" href="https://inema.club" rel="noopener" target="_blank">INEMA.CLUB</a>
+<span class="sep">-</span>
+<a class="pro" href="https://inema.pro" rel="noopener" target="_blank">PRO</a>
+</span>
+<div class="links">
+<a class="sec" href="#oque">Qué es</a>
+<a class="sec" href="#fluxo">Cómo funciona</a>
+<a class="sec" href="#guia">Guía de uso</a>
+<a class="sec" href="#exemplos">Ejemplos</a>
+<a class="sec" href="#roadmap">Hoja de ruta</a>
+<button aria-label="Cambiar tema" class="tgl" id="themeToggle" title="Cambiar tema">🌙</button>
+<a class="btn" href="https://github.com/inematds/ugc-seedance25" rel="noopener" target="_blank">GitHub</a>
+</div>
+</div></nav>
+<header class="hero" id="top">
+<div class="glow"></div>
+<div class="wrap">
+<div>
+<span class="chip">Skill Claude Code + generador de briefs · Seedance 2.5</span>
+<h1>Un producto se convierte en un anuncio <span class="amb">UGC</span> de 30 s, en una sola toma</h1>
+<p class="lead">Foto del producto + retrato del creator + video one-take con voz y lip-sync nativos. Obtienes los 3 prompts listos para pegar en Magnific, Higgsfield o fal.ai.</p>
+<div class="cta">
+<a class="btn" href="#guia">Comenzar la guía</a>
+<a class="btn ghost" href="../app/public/" rel="noopener" target="_blank">Abrir el generador</a>
+<a class="btn ghost" href="https://github.com/inematds/ugc-seedance25" rel="noopener" target="_blank">Ver en GitHub</a>
+</div>
+</div>
+<figure><img alt="Creator grabándose con el celular, con el producto en las manos y luz natural" src="../assets/hero.jpg"/></figure>
+</div>
+</header>
+<section id="oque"><div class="wrap">
+<span class="chip">Qué es</span>
+<h2>La receta del pack "Seedance 2.5 UGC Ads", en tu flujo</h2>
+<p class="sub">El pack (Zubair Trabzada · AI Workshop, 2026) enseña una receta de 3 pasos y 9 formatos para anuncios que parecen grabados por una persona real con el celular. Este proyecto convierte la receta en dos herramientas: una skill para Claude Code y un generador de briefs web.</p>
+<div class="grid g3">
+<div class="card"><h3>🎬 One-take de 30 s</h3><p>Seedance 2.5 genera todo el anuncio de una vez: mismo rostro, misma voz, mismo producto, sin cortes. 9:16, 1080p, audio nativo con lip-sync.</p></div>
+<div class="card"><h3>🧩 9 formatos listos</h3><p>Reseña, confesión en la mesa, rutina nocturna, unboxing, try-on, POV solo con las manos, prueba de sabor y dos "trae tu producto" (foto o captura de la tienda).</p></div>
+<div class="card"><h3>🛡️ Reglas para evitar el AI-slop</h3><p>Producto en cuadro durante los primeros 3 segundos, bloque de realismo, cada frase entre comillas con marca de tiempo, sonidos prohibidos, QA con fotogramas congelados.</p></div>
+</div>
+</div></section>
+<section id="fluxo"><div class="wrap">
+<span class="chip">Cómo funciona</span>
+<h2>Tres generaciones, siempre en el mismo orden</h2>
+<p class="sub">Los prompts están en inglés (el modelo los interpreta mejor); solo las frases entre comillas van en el idioma elegido, PT-BR de forma predeterminada. Cinco beats con marcas de tiempo guían la actuación: 70–80 palabras habladas caben en 30 s.</p>
+<div class="flow">
+<span>Brief del producto</span><span class="arr">→</span>
+<span>STEP 1 · foto del producto</span><span class="arr">→</span>
+<span>STEP 2 · retrato del creator</span><span class="arr">→</span>
+<span>STEP 3 · video one-take</span><span class="arr">→</span>
+<span>QA con fotogramas</span>
+</div>
+<div class="grid g3" style="margin-top:26px">
+<div class="card"><div class="num">1</div><h3>Producto</h3><p>Foto limpia de e-commerce, etiqueta corta (marca + dos líneas). Se convierte en la identidad del producto en todos los anuncios.</p></div>
+<div class="card"><div class="num">2</div><h3>Creator</h3><p>Retrato "cámara frontal de iPhone, sin retoques", en el mismo espacio, con la ropa y la iluminación exactas del video. El mismo rostro sirve para una serie.</p></div>
+<div class="card"><div class="num">3</div><h3>Video</h3><p>Shot list de 5 beats: hook (0–4 s), qué es (4–11 s), demo (11–18 s), resultado (18–25 s), cierre (25–30 s). Bloque de realismo y bloque de audio.</p></div>
+</div>
+</div></section>
+<section id="pre"><div class="wrap">
+<span class="chip">Requisitos previos</span>
+<h2>Qué debe estar en línea</h2>
+<p class="sub">El generador en modo Template funciona en cualquier navegador, sin servidor. La skill y el modo IA usan lo que ya tienes en Claude Code.</p>
+<div class="grid g3">
+<div class="card"><h3>Claude Code (skill y modo IA)</h3><p>La skill se ejecuta dentro de Claude Code. El modo IA de la app usa OAuth de Claude Code de forma predeterminada, sin clave de API.</p><pre><span class="c"># en la máquina donde se ejecutará la app</span>
+<span class="k">claude login</span></pre></div>
+<div class="card"><h3>Node 20+ (app local)</h3><p>Solo para el modo IA. El modo Template es estático.</p><pre><span class="k">cd</span> app &amp;&amp; <span class="k">npm install</span>
+<span class="k">npm run dev</span>   <span class="c"># http://localhost:3040</span></pre></div>
+<div class="card"><h3>Una plataforma con Seedance 2.5</h3><p>Magnific (MCP, predeterminado), Higgsfield o fal.ai. La app cambia los encabezados de los parámetros para cada uno. Generar consume créditos; la skill simula el costo antes.</p><pre><span class="c"># herramientas de QA (opcional)</span>
+<span class="k">ffmpeg -version</span></pre></div>
+</div>
+</div></section>
+<section id="guia"><div class="wrap">
+<span class="chip">Guía de uso · paso a paso</span>
+<h2>Del producto al brief listo</h2>
+<p class="sub">Dos caminos para obtener el mismo resultado: el generador web (sin instalar nada) o la skill en Claude Code (que también puede ejecutarse en Magnific).</p>
+<div class="step"><div class="b">1</div><div>
+<h3>Abre el generador y completa el brief</h3>
+<p>Marca, producto en una línea, quién compra, origen del producto (desde cero, foto o captura de la tienda), formato (01–09), creator, idioma de las frases y plataforma de destino.</p>
+<pre><span class="k">https://inematds.github.io/ugc-seedance25/app/public/</span>  <span class="c"># modo Template, sin servidor</span>
+<span class="c"># o local, con modo IA mediante OAuth de Claude Code:</span>
+<span class="k">cd</span> app &amp;&amp; <span class="k">npm install</span> &amp;&amp; <span class="k">npm run dev</span></pre>
+</div></div>
+<div class="step"><div class="b">2</div><div>
+<h3>Escribe (o genera) los 5 diálogos</h3>
+<p>Modo Template: escribes las frases en los 5 campos y el contador avisa si sales del rango de 70–80 palabras. Modo IA: Claude escribe el producto, el creator, las acciones de los beats, las 5 frases en el idioma elegido y 2–3 hooks alternativos.</p>
+<pre><span class="c"># ejemplo de diálogo para el hook (formato 07, prueba de sabor)</span>
+<span class="s">"Todo energético diz que não sabe a remédio. Toda vez é mentira."</span></pre>
+</div></div>
+<div class="step"><div class="b">3</div><div>
+<h3>Copia los 3 prompts con los parámetros de la plataforma</h3>
+<p>Cada STEP tiene un botón para copiar y el encabezado con los parámetros del destino elegido. "Copiar brief completo" o "Descargar .md" incluye todo de una vez, con la lista de verificación de QA.</p>
+<pre><span class="c"># PASO 3 en Magnific</span>
+video_generate · slug <span class="s">bytedance-seedance-pro-2.5</span> · 9:16 · 1080p · duration 30
+references[]: {type:<span class="s">'product'</span>, STEP 1} + {type:<span class="s">'character'</span>, STEP 2} · sem keyframes</pre>
+</div></div>
+<div class="step"><div class="b">4</div><div>
+<h3>O usa la skill en Claude Code</h3>
+<p>La skill pregunta lo que falte en el brief, elige el formato según el producto, escribe los 3 prompts y guarda un <code>brief.md</code>. Solo se ejecuta en Magnific si lo pides, y siempre con una simulación de costos antes.</p>
+<pre><span class="c"># instalar (symlink al repo clonado)</span>
+<span class="k">ln -s</span> ~/projetos/ugc-seedance25/skill/ugc-seedance25 ~/.claude/skills/ugc-seedance25
+<span class="c"># usar</span>
+<span class="k">/ugc-seedance25</span> anúncio ugc do meu sérum, tenho a foto em ~/fotos/serum.jpg
+<span class="c"># salida: ~/projetos/output/ugc-seedance25/&lt;slug&gt;/brief.md</span></pre>
+</div></div>
+<div class="step"><div class="b">5</div><div>
+<h3>Genera con control de costos: borrador en 720p, versión final en 1080p</h3>
+<p>En Magnific, la skill ejecuta <code>simulate_cost</code> y muestra el número antes de generar. Después: foto del producto, retrato del creator, borrador en 720p, aprobación, versión final en 1080p. ¿La voz en PT-BR quedó mal? Genérala en inemavox y pásala como referencia de audio.</p>
+<pre><span class="c"># orden fija</span>
+simulate_cost → STEP 1 → STEP 2 → vídeo 720p → QA → vídeo 1080p</pre>
+</div></div>
+<div class="step"><div class="b">6</div><div>
+<h3>QA con fotogramas congelados, no con sensaciones</h3>
+<p>Hoja de contactos 3×3 y revisión del espejo. Un solo producto, máximo dos manos, etiqueta legible y en el sentido correcto, rostro igual al del retrato, sin subtítulos incrustados, producto visible antes de 3 s.</p>
+<pre><span class="k">ffmpeg</span> -y -i ad.mp4 -vf <span class="s">"fps=0.3,scale=360:-1,tile=3x3"</span> contact.png
+<span class="k">ffmpeg</span> -y -i ad.mp4 -vf hflip -c:a copy ad-fixed.mp4   <span class="c"># si la etiqueta salió invertida</span></pre>
+</div></div>
+<h3 style="margin:34px 0 12px">Los 9 formatos</h3>
+<div style="overflow-x:auto"><table>
+<tr><th>#</th><th>Formato</th><th>Ideal para</th><th>La idea clave</th></tr>
+<tr><td>01</td><td>Classic Review</td><td>sérum, hidratante, cabello</td><td>el hook suena como la mitad de una historia, nunca como el comienzo de un anuncio</td></tr>
+<tr><td>02</td><td>Desk Confession</td><td>suplemento, café, productividad</td><td>nunca cortes el momento de consumir frente a la cámara</td></tr>
+<tr><td>03</td><td>Night Routine</td><td>gadget de belleza, tecnología para el hogar</td><td>una broma autocrítica a mitad de la demo</td></tr>
+<tr><td>04</td><td>Unboxing</td><td>lanzamiento, empaque premium</td><td>la caja sellada es el hook; revelación a mitad</td></tr>
+<tr><td>05</td><td>Try-On</td><td>ropa, activewear, joyería</td><td>la tela toca la lente; cierre para recompra</td></tr>
+<tr><td>06</td><td>Product-Only POV</td><td>cocina, hogar, papelería</td><td>la voz en off coincide con lo que hacen las manos</td></tr>
+<tr><td>07</td><td>Taste Test</td><td>comida, bebida, snack</td><td>escéptico convencido; «Espera» después del sorbo</td></tr>
+<tr><td>08</td><td>Bring Your Own (foto)</td><td>tu producto real</td><td>volver a fotografiar; nunca usar la foto sin editar en el video</td></tr>
+<tr><td>09</td><td>Screenshot-to-POV</td><td>captura de una tienda, sin rostro</td><td>"ignora cualquier interfaz del sitio web" o hereda botones</td></tr>
+</table></div>
+</div></section>
+<section id="exemplos"><div class="wrap">
+<span class="chip">Ejemplos</span>
+<h2>El generador y la portada del proyecto</h2>
+<p class="sub">Formato 05 (try-on) cargado con el ejemplo del pack, destino Higgsfield: el STEP 3 sale con apertura de espejo, 5 beats, bloque de realismo y lista de sonidos prohibidos.</p>
+<div class="ex">
+<figure><img alt="Pantalla del generador con el STEP 3 preparado para el formato try-on" src="../assets/ex-app.jpg"/><figcaption>Generador en modo Template: STEP 3 listo para copiar, con los parámetros de la plataforma en la parte superior.</figcaption></figure>
+<figure><img alt="Portada del proyecto UGC Seedance 2.5" src="../assets/ex-capa.jpg"/><figcaption>Portada oficial del proyecto en el catálogo INEMA.</figcaption></figure>
+</div>
+</div></section>
+<section id="roadmap"><div class="wrap">
+<span class="chip">Hoja de ruta</span>
+<h2>Qué existe y qué viene</h2>
+<p class="sub">Versión 1.0.0. El plan completo, con el mapeo del pack a Magnific y los riesgos, está en <code>PLANO.md</code> en el repo.</p>
+<div class="phase"><div class="tag">Listo</div><div class="d"><strong>Skill + generador de briefs</strong><span>9 formatos, 5 beats, bloques fijos, destinos Magnific/Higgsfield/fal.ai, modo Template y modo IA (OAuth de Claude Code o OpenRouter), QA en fotogramas.</span></div></div>
+<div class="phase"><div class="tag">Medir</div><div class="d"><strong>Costo real del one-take de 30 s en 1080p en Magnific</strong><span>Solo hay medición de 5 s. La skill exige simulate_cost antes de generar; el valor se incluye en el PLANO cuando se mida.</span></div></div>
+<div class="phase"><div class="tag">Probar</div><div class="d"><strong>Lip-sync en PT-BR directamente desde el prompt</strong><span>Alternativa lista: voz en inemavox como referencia de audio. Falta comparar los dos caminos en un anuncio real.</span></div></div>
+<div class="phase"><div class="tag">Después</div><div class="d"><strong>Serie de variantes</strong><span>La misma foto del producto, un hook y creator nuevos, dos por semana. Lote con QA automática de contact sheet.</span></div></div>
+</div></section>
+<footer>
+<div class="wrap">
+<div class="pill">Claude Code skill</div><div class="pill">HTML + JS puro</div><div class="pill">Vercel serverless (opcional)</div><div class="pill">Seedance 2.5</div>
+<p style="margin-top:18px">UGC Seedance 2.5 · a partir del pack de Zubair Trabzada (AI Workshop) ·
+      <a href="https://github.com/inematds/ugc-seedance25">inematds/ugc-seedance25</a> ·
+      <a href="https://inema.club">INEMA.CLUB</a></p>
+</div>
+</footer>
+<script>
+  (function(){
+    var KEY='ugc-seedance25-theme';
+    var b=document.body, t=document.getElementById('themeToggle');
+    if(localStorage.getItem(KEY)==='light'){ b.classList.add('light'); t.textContent='☀️'; }
+    t.addEventListener('click',function(){
+      var light=b.classList.toggle('light');
+      t.textContent=light?'☀️':'🌙';
+      localStorage.setItem(KEY, light?'light':'dark');
+    });
+  })();
+</script>
+</body>
+</html>
