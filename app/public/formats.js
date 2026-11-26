@@ -1,6 +1,6 @@
 // Fonte única de conteúdo do pack "Seedance 2.5 UGC Ads" adaptado pro ecossistema INEMA.
-// Usado pelo front (modo Template) e pela função serverless (system prompt do modo IA).
-// Prompts ficam em inglês (o modelo lê melhor); as FALAS vão no idioma escolhido pelo usuário.
+// Usado pelo front (modo Template) e pela funçêo serverless (system prompt do modo IA).
+// Prompts ficam em inglês (o modelo lê melhor); as FALAS vêo no idioma escolhido pelo usuário.
 
 export const VERSION = "1.0.0";
 
@@ -9,7 +9,7 @@ export const BEATS = [
   { id: "what", t: "4-11s", label: "WHAT IT IS", pt: "Nomeia o produto, vira o rótulo pra lente." },
   { id: "demo", t: "11-18s", label: "DEMO", pt: "Usa na câmera: aplica, come, veste, abre, liga." },
   { id: "result", t: "18-25s", label: "RESULT", pt: "A prova, inclinando pra lente." },
-  { id: "close", t: "25-30s", label: "CLOSE", pt: "Uma frase sem pressão. Nunca hard sell." },
+  { id: "close", t: "25-30s", label: "CLOSE", pt: "Uma frase sem pressêo. Nunca hard sell." },
 ];
 
 export const WORDS_MIN = 70;
@@ -38,7 +38,7 @@ export const TARGETS = {
     step1: "images_generate · mode gpt-2 (rótulo legível; seedream-5-pro se precisar de fidelidade máxima) · 3:4",
     step2: "images_generate · mode flux-2-klein (ou seedream-5-pro) · 3:4",
     step3: "video_generate · slug bytedance-seedance-pro-2.5 · aspectRatio 9:16 · resolution 1080p (rascunho: 720p) · duration 30 · references[]: {type:'product', image do STEP 1} + {type:'character', image do STEP 2} · sem keyframes",
-    note: "Rodar simulate_cost antes de gerar. Custo do 30 s 1080p ainda não medido (5 s/720p/16:9 = 2.200 cr). Fallback de voz PT-BR: inemavox → references[] type audio.",
+    note: "Rodar simulate_cost antes de gerar. Custo do 30 s 1080p ainda nêo medido (5 s/720p/16:9 = 2.200 cr). Fallback de voz PT-BR: inemavox → references[] type audio.",
   },
   higgsfield: {
     name: "Higgsfield (MCP)",
@@ -52,16 +52,16 @@ export const TARGETS = {
     step1: "gpt-image (ou flux) · 3:4 · texto do rótulo curto",
     step2: "flux / seedream · 3:4 · retrato realista",
     step3: "bytedance/seedance 2.5 pro · reference-to-video · 9:16 · 1080p · 30 s · audio on · duas imagens de referência",
-    note: "Conferir nome exato do endpoint e limites de duração no dia — mudam com frequência.",
+    note: "Conferir nome exato do endpoint e limites de duraçêo no dia — mudam com frequência.",
   },
 };
 
-// Os 9 formatos do pack. `kind`: face (creator falando), mirror (try-on com espelho), pov (só mãos + voz off).
+// Os 9 formatos do pack. `kind`: face (creator falando), mirror (try-on com espelho), pov (só mêos + voz off).
 // `example` traz o exemplo original do pack (marca fictícia) pra servir de gabarito de tom.
 export const FORMATS = [
   {
-    id: "01", kind: "face", title: "Classic Review", subtitle: "A confissão de skincare",
-    bestFor: "séruns, hidratantes, cabelo, qualquer coisa aplicada na câmera. O UGC padrão.",
+    id: "01", kind: "face", title: "Classic Review", subtitle: "A confissêo de skincare",
+    bestFor: "séruns, hidratantes, cabelo, qualquer coisa aplicada na câmera. O UGC padrêo.",
     demoVerb: "aplica na pele",
     light: "flat daylight", delivery: "natural conversational pacing with tiny pauses", sfx: "",
     beats: [
@@ -71,7 +71,7 @@ export const FORMATS = [
       "tilts cheek toward the lens into the window light",
       "back to center, small shrug and grin, holds the product up",
     ],
-    tip: "Troque o produto nos passos 1 e 3, mantenha o resto. O hook é a edição de maior alavancagem: tem que soar como o meio de uma história, nunca como o começo de um anúncio.",
+    tip: "Troque o produto nos passos 1 e 3, mantenha o resto. O hook é a ediçêo de maior alavancagem: tem que soar como o meio de uma história, nunca como o começo de um anúncio.",
     example: {
       brand: "DEW", product: "barrier repair serum", customer: "mulher, 20-30, pele sensível",
       product_prompt: "Clean e-commerce product photograph of a frosted glass skincare serum bottle with a white dropper cap, minimal matte white label reading 'DEW · Barrier Repair Serum · Hyaluronic + Ceramides', on a beige stone bathroom counter, soft natural window light, photoreal, no watermark.",
@@ -123,7 +123,7 @@ export const FORMATS = [
       "lifts it off and leans toward the lens with the proof",
       "hugs the product to the chest, grins, one line",
     ],
-    tip: "A piada autodepreciativa no meio da demo (\"pareço vilã de filme\") faz o trabalho pesado: é o beat que torna o anúncio humano. Todo anúncio de gadget precisa de um momento em que o creator ri de si mesmo.",
+    tip: "A piada autodepreciativa no meio da demo (\"pareço vilê de filme\") faz o trabalho pesado: é o beat que torna o anúncio humano. Todo anúncio de gadget precisa de um momento em que o creator ri de si mesmo.",
     example: {
       brand: "(sem marca)", product: "LED red-light therapy face mask", customer: "mulher, 28-38, rotina noturna",
       product_prompt: "Clean e-commerce product photograph of a white silicone LED light-therapy face mask with rows of small red and amber LEDs glowing softly, resting on a marble vanity next to its white controller remote, soft evening lamp light, photoreal, no text on product, no watermark.",
@@ -138,8 +138,8 @@ export const FORMATS = [
     },
   },
   {
-    id: "04", kind: "face", title: "Unboxing", subtitle: "A primeira reação",
-    bestFor: "lançamentos, embalagem premium, tech. Quando a revelação em si é o conteúdo.",
+    id: "04", kind: "face", title: "Unboxing", subtitle: "A primeira reaçêo",
+    bestFor: "lançamentos, embalagem premium, tech. Quando a revelaçêo em si é o conteúdo.",
     demoVerb: "abre a caixa e usa pela primeira vez",
     light: "neutral daylight", delivery: "genuine unscripted-feeling reactions with small pauses",
     sfx: "real paper and plastic sounds from the unboxing synced to the hands, ",
@@ -150,7 +150,7 @@ export const FORMATS = [
       "first use on camera, eyes widen, voice drops a little",
       "looks back at the product in hand, half-laughs, verdict",
     ],
-    tip: "Arco: antecipação → embalagem → produto → primeiro uso → veredito. A revelação tem que cair no meio do vídeo, não no começo: a caixa lacrada É o hook.",
+    tip: "Arco: antecipaçêo → embalagem → produto → primeiro uso → veredito. A revelaçêo tem que cair no meio do vídeo, nêo no começo: a caixa lacrada É o hook.",
     example: {
       brand: "AURA", product: "premium wireless earbuds", customer: "mulher, 20-28, tech",
       product_prompt: "Clean e-commerce product photograph of a matte sage-green earbuds charging case, lid open showing white earbuds inside, sitting on top of its minimal matte kraft box printed only with 'AURA' in small dark letters, on a light desk, soft daylight, photoreal, no watermark.",
@@ -176,7 +176,7 @@ export const FORMATS = [
       "back to front camera close, rubs the material between fingers near the lens",
       "hands in pocket, little shoulder shrug, repurchase-intent line",
     ],
-    tip: "Close-up de textura vende tecido melhor que qualquer adjetivo: sempre roteirize um beat em que o material toca a lente. O fecho 'já sei que vou comprar a cinza' é padrão comprovado: intenção de recompra lê como o review mais forte possível.",
+    tip: "Close-up de textura vende tecido melhor que qualquer adjetivo: sempre roteirize um beat em que o material toca a lente. O fecho 'já sei que vou comprar a cinza' é padrêo comprovado: intençêo de recompra lê como o review mais forte possível.",
     example: {
       brand: "LOFT", product: "cloud-soft oversized hoodie", customer: "mulher, 20-30, conforto",
       product_prompt: "Clean e-commerce product photograph of an oatmeal-cream heavyweight oversized hoodie, thick soft fleece visibly plush, neatly folded on a light linen surface with a small woven label reading 'LOFT', soft daylight, photoreal, no watermark.",
@@ -191,9 +191,9 @@ export const FORMATS = [
     },
   },
   {
-    id: "06", kind: "pov", title: "Product-Only POV", subtitle: "Mãos e voz off",
+    id: "06", kind: "pov", title: "Product-Only POV", subtitle: "Mêos e voz off",
     bestFor: "utensílios de cozinha, casa, papelaria. Quando o produto deve ser a única estrela.",
-    demoVerb: "as mãos usam o produto em tempo real",
+    demoVerb: "as mêos usam o produto em tempo real",
     light: "bright natural kitchen daylight", delivery: "", sfx: "real handling sounds synced to each action, ",
     beats: [
       "hands lift the product off the surface, tilting it in the window light",
@@ -202,7 +202,7 @@ export const FORMATS = [
       "hands present the outcome, product resting label side up",
       "hands still, product centered in the light",
     ],
-    tip: "POV funciona quando a satisfação é visual: fatiar, despejar, descascar, clicar. Cada frase da voz off tem que casar com o que as mãos fazem naquele beat; deriva é o que faz voz off parecer falsa.",
+    tip: "POV funciona quando a satisfaçêo é visual: fatiar, despejar, descascar, clicar. Cada frase da voz off tem que casar com o que as mêos fazem naquele beat; deriva é o que faz voz off parecer falsa.",
     example: {
       brand: "FORGE", product: "Japanese-steel chef's knife", customer: "quem cozinha em casa",
       product_prompt: "Clean e-commerce product photograph of a chef's knife with a hammered Japanese steel blade and dark walnut handle, lying on a light wood cutting board beside a ripe tomato, bright kitchen daylight, photoreal, no watermark.",
@@ -217,8 +217,8 @@ export const FORMATS = [
     },
   },
   {
-    id: "07", kind: "face", title: "Taste Test", subtitle: "A reação honesta",
-    bestFor: "comida, bebida, snacks. A reação é o anúncio inteiro.",
+    id: "07", kind: "face", title: "Taste Test", subtitle: "A reaçêo honesta",
+    bestFor: "comida, bebida, snacks. A reaçêo é o anúncio inteiro.",
     demoVerb: "abre e prova na câmera",
     light: "bright kitchen daylight", delivery: "dry sarcastic-to-surprised delivery",
     sfx: "the real crack-hiss of the can opening and quiet carbonation synced to the sip, ",
@@ -229,7 +229,7 @@ export const FORMATS = [
       "looks at the product, then back at the lens, the honest comparison",
       "second longer taste, points at the product, takes it back",
     ],
-    tip: "O arco cético-convertido bate elogio direto pra qualquer coisa comestível: os primeiros 10 segundos atacam a categoria, não o produto. A palavra única 'Espera.' depois do gole é o anúncio inteiro; mantenha um beat assim de quieto.",
+    tip: "O arco cético-convertido bate elogio direto pra qualquer coisa comestível: os primeiros 10 segundos atacam a categoria, nêo o produto. A palavra única 'Espera.' depois do gole é o anúncio inteiro; mantenha um beat assim de quieto.",
     example: {
       brand: "VOLT", product: "sparkling yuzu energy water, zero sugar", customer: "homem, 25-35, academia",
       product_prompt: "Clean e-commerce product photograph of a slim sleek matte-white beverage can with a thin yellow band, label reading 'VOLT · Sparkling Yuzu · Zero Sugar', beads of condensation on the can, on a concrete kitchen counter, bright daylight, photoreal, no watermark.",
@@ -256,7 +256,7 @@ export const FORMATS = [
       "leans toward the lens with the proof, stated like a fact to a friend, not a claim",
       "relaxed close, product held up, low-pressure closer",
     ],
-    tip: "O passo de re-fotografar não é polimento opcional: é o que faz o rótulo real sobreviver no vídeo. Use o resultado gerado como referência, nunca a foto crua.",
+    tip: "O passo de re-fotografar nêo é polimento opcional: é o que faz o rótulo real sobreviver no vídeo. Use o resultado gerado como referência, nunca a foto crua.",
     example: {
       brand: "[MARCA]", product: "[o que é em uma linha]", customer: "[quem compra]",
       product_prompt: "Using the attached product photo as the exact reference, recreate this product faithfully as a clean e-commerce product photograph — identical shape, colors, label text and logo — placed on [a surface that fits the product], soft natural light, photoreal, no watermark.",
@@ -272,8 +272,8 @@ export const FORMATS = [
   },
   {
     id: "09", kind: "pov", title: "Screenshot-to-POV", subtitle: "Do print da loja ao anúncio sem rosto",
-    bestFor: "transformar um print de listagem (loja, Amazon, Etsy) em demo de mãos + voz off. Sem creator.",
-    demoVerb: "as mãos usam o produto em tempo real",
+    bestFor: "transformar um print de listagem (loja, Amazon, Etsy) em demo de mêos + voz off. Sem creator.",
+    demoVerb: "as mêos usam o produto em tempo real",
     light: "natural daylight", delivery: "", sfx: "real handling sounds synced to the hands' actions, ",
     byo: true,
     beats: [
@@ -303,9 +303,9 @@ export const RULES = [
   { n: 1, title: "Produto em quadro nos 3 primeiros segundos", body: "Roteirize o produto subindo pro quadro durante a fala do hook, nunca depois." },
   { n: 2, title: "Escreva o bloco de realismo ou vira AI-slop", body: "Sem 'pore-level skin texture, flat daylight, amateur framing, no beauty filter, no cinematic grade' você ganha pele de cera e bokeh laranja-azul. Amador é a estética." },
   { n: 3, title: "Toda fala entre aspas, com timestamp", body: "'Ela fala do produto' sem aspas gera resmungo. 70–80 palavras é o teto pra 30 s." },
-  { n: 4, title: "Proíba os sons que não quer", body: "Termine o bloco de áudio com a lista curta: no music, no water droplets, no bubbles, no synthesized blips. Lista curta; prompt longo demais começa a falhar." },
+  { n: 4, title: "Proíba os sons que nêo quer", body: "Termine o bloco de áudio com a lista curta: no music, no water droplets, no bubbles, no synthesized blips. Lista curta; prompt longo demais começa a falhar." },
   { n: 5, title: "Espere a loteria do espelho", body: "Alguns takes saem espelhados como câmera frontal real. É consistente no clipe: um hflip no ffmpeg corrige tudo. Cheque o rótulo antes de entregar." },
-  { n: 6, title: "QA em frames congelados, não em vibe", body: "Contact sheet 3×3 (ffmpeg tile): exatamente um produto, no máximo duas mãos, rótulo legível, rosto igual à referência, nenhuma legenda embutida." },
+  { n: 6, title: "QA em frames congelados, nêo em vibe", body: "Contact sheet 3×3 (ffmpeg tile): exatamente um produto, no máximo duas mêos, rótulo legível, rosto igual à referência, nenhuma legenda embutida." },
   { n: 7, title: "Volume é a estratégia", body: "Criativo cansa em ~72 h. Variante nova 2× por semana: mesma receita, hook novo, creator novo, mesma imagem de produto." },
 ];
 

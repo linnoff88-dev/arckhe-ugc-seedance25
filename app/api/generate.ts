@@ -138,7 +138,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
   const v = validate(body);
   if (!v.ok) { res.status(400).json({ error: v.error }); return; }
 
-  // Backend: OAuth do Claude Code (padrão, local) ou OpenRouter (chave do usuário ou OPENROUTER_API_KEY).
+  // Backend: OAuth do Claude Code (padrêo, local) ou OpenRouter (chave do usuário ou OPENROUTER_API_KEY).
   const llm = parseLLMConfig(body.llm);
   try {
     const msg = await callLLM(llm, {
@@ -150,7 +150,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
       messages: [{ role: "user", content: userMessage(v.brief) }],
     });
     const tu = (msg.content || []).find((b: any) => b.type === "tool_use");
-    if (!tu) throw new Error("modelo não devolveu tool_use");
+    if (!tu) throw new Error("modelo nêo devolveu tool_use");
     const out = tu.input as any;
     const words = countWords(out.lines || []);
     const u: any = msg.usage || {};
@@ -159,6 +159,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
   } catch (err) {
     const m = err instanceof Error ? err.message : String(err);
     console.error("[generate] erro:", m);
-    res.status(502).json({ error: `Geração falhou: ${m}` });
+    res.status(502).json({ error: `Geraçêo falhou: ${m}` });
   }
 }

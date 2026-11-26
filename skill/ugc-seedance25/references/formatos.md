@@ -5,21 +5,21 @@ no repo `~/projetos/ugc-seedance25`. Este arquivo é o resumo pra escolher e esc
 
 | # | Formato | Tipo | Melhor pra | Demo obrigatória | A sacada |
 |---|---|---|---|---|---|
-| 01 | Classic Review | rosto | sérum, hidratante, cabelo; o UGC padrão | aplica na pele, vira a bochecha pra luz | hook soa como meio de história, nunca começo de anúncio |
+| 01 | Classic Review | rosto | sérum, hidratante, cabelo; o UGC padrêo | aplica na pele, vira a bochecha pra luz | hook soa como meio de história, nunca começo de anúncio |
 | 02 | Desk Confession | rosto | suplemento, café, produtividade | come/bebe/toca na câmera | nunca cortar o beat de consumir; app = tocar na tela |
-| 03 | Night Routine | rosto | gadget de beleza/bem-estar, tech de casa | liga/usa no corpo | uma piada autodepreciativa no meio ("pareço vilã") |
-| 04 | Unboxing | rosto | lançamento, embalagem premium | abre a caixa, primeiro uso | a caixa lacrada É o hook; revelação no meio |
+| 03 | Night Routine | rosto | gadget de beleza/bem-estar, tech de casa | liga/usa no corpo | uma piada autodepreciativa no meio ("pareço vilê") |
+| 04 | Unboxing | rosto | lançamento, embalagem premium | abre a caixa, primeiro uso | a caixa lacrada É o hook; revelaçêo no meio |
 | 05 | Try-On | espelho | roupa, activewear, joia | veste, checa no espelho, tecido na lente | fecho de recompra ("já vou comprar a cinza") |
-| 06 | Product-Only POV | POV | cozinha, casa, papelaria | mãos usam em tempo real | voz off casa com o que as mãos fazem naquele beat |
+| 06 | Product-Only POV | POV | cozinha, casa, papelaria | mêos usam em tempo real | voz off casa com o que as mêos fazem naquele beat |
 | 07 | Taste Test | rosto | comida, bebida, snack | abre e prova; uma palavra: "Espera." | cético-convertido: ataca a categoria nos 10 s iniciais |
 | 08 | Bring Your Own (foto) | rosto | SEU produto, com foto | usa na câmera | re-fotografar o produto; nunca a foto crua no vídeo |
-| 09 | Screenshot-to-POV | POV | print de loja, sem rosto | mãos usam em tempo real | "ignore any website interface" ou herda botões e preço |
+| 09 | Screenshot-to-POV | POV | print de loja, sem rosto | mêos usam em tempo real | "ignore any website interface" ou herda botões e preço |
 
 ## Escolha rápida pelo produto
 
 - Aplica na pele/cabelo → 01 · Engole/bebe pra resolver dor diária → 02 · Aparelho com estado "uau" → 03
-- Embalagem é o show → 04 · Veste → 05 · Utensílio/objeto, satisfação visual → 06 · Comida/bebida → 07
-- Usuário mandou foto → 08 · Mandou print de listagem, ou não quer rosto → 09
+- Embalagem é o show → 04 · Veste → 05 · Utensílio/objeto, satisfaçêo visual → 06 · Comida/bebida → 07
+- Usuário mandou foto → 08 · Mandou print de listagem, ou nêo quer rosto → 09
 
 ## Exemplo completo (formato 02, do pack, em inglês; gabarito de tom)
 

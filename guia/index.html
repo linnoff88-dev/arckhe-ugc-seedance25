@@ -128,7 +128,7 @@
 <a class="btn ghost" href="https://github.com/inematds/ugc-seedance25" rel="noopener" target="_blank">Ver no GitHub</a>
 </div>
 </div>
-<figure><img alt="Creator filmando a si mesma com o celular, produto em mãos, luz natural" src="assets/hero.jpg"/></figure>
+<figure><img alt="Creator filmando a si mesma com o celular, produto em mêos, luz natural" src="assets/hero.jpg"/></figure>
 </div>
 </header>
 <section id="oque"><div class="wrap">
@@ -137,14 +137,14 @@
 <p class="sub">O pack (Zubair Trabzada · AI Workshop, 2026) ensina uma receita de 3 passos e 9 formatos pra anúncios que parecem gravados por uma pessoa real no celular. Este projeto transforma a receita em duas ferramentas: uma skill pro Claude Code e um gerador de brief na web.</p>
 <div class="grid g3">
 <div class="card"><h3>🎬 One-take de 30 s</h3><p>Seedance 2.5 gera o anúncio inteiro de uma vez: mesmo rosto, mesma voz, mesmo produto, sem costura. 9:16, 1080p, áudio nativo com lip-sync.</p></div>
-<div class="card"><h3>🧩 9 formatos prontos</h3><p>Review, confissão na mesa, rotina noturna, unboxing, try-on, POV só mãos, teste de sabor e dois "traga seu produto" (foto ou print da loja).</p></div>
+<div class="card"><h3>🧩 9 formatos prontos</h3><p>Review, confissêo na mesa, rotina noturna, unboxing, try-on, POV só mêos, teste de sabor e dois "traga seu produto" (foto ou print da loja).</p></div>
 <div class="card"><h3>🛡️ Regras que evitam AI-slop</h3><p>Produto em quadro nos 3 primeiros segundos, bloco de realismo, toda fala entre aspas com timestamp, sons proibidos, QA em frames congelados.</p></div>
 </div>
 </div></section>
 <section id="fluxo"><div class="wrap">
 <span class="chip">Como funciona</span>
 <h2>Três gerações, sempre na mesma ordem</h2>
-<p class="sub">Os prompts ficam em inglês (o modelo lê melhor); só as falas entre aspas vão no idioma escolhido, PT-BR por padrão. Cinco beats com timestamp pautam a atuação: 70–80 palavras faladas cabem em 30 s.</p>
+<p class="sub">Os prompts ficam em inglês (o modelo lê melhor); só as falas entre aspas vêo no idioma escolhido, PT-BR por padrêo. Cinco beats com timestamp pautam a atuaçêo: 70–80 palavras faladas cabem em 30 s.</p>
 <div class="flow">
 <span>Brief do produto</span><span class="arr">→</span>
 <span>STEP 1 · foto do produto</span><span class="arr">→</span>
@@ -163,11 +163,11 @@
 <h2>O que precisa estar no ar</h2>
 <p class="sub">O gerador em modo Template roda em qualquer navegador, sem servidor. A skill e o modo IA usam o que você já tem no Claude Code.</p>
 <div class="grid g3">
-<div class="card"><h3>Claude Code (skill e modo IA)</h3><p>A skill roda dentro do Claude Code. O modo IA do app usa o OAuth do Claude Code por padrão, sem chave de API.</p><pre><span class="c"># na máquina onde o app vai rodar</span>
+<div class="card"><h3>Claude Code (skill e modo IA)</h3><p>A skill roda dentro do Claude Code. O modo IA do app usa o OAuth do Claude Code por padrêo, sem chave de API.</p><pre><span class="c"># na máquina onde o app vai rodar</span>
 <span class="k">claude login</span></pre></div>
 <div class="card"><h3>Node 20+ (app local)</h3><p>Só pro modo IA. O modo Template é estático.</p><pre><span class="k">cd</span> app &amp;&amp; <span class="k">npm install</span>
 <span class="k">npm run dev</span>   <span class="c"># http://localhost:3040</span></pre></div>
-<div class="card"><h3>Uma plataforma com Seedance 2.5</h3><p>Magnific (MCP, padrão), Higgsfield ou fal.ai. O app troca os cabeçalhos de parâmetro pra cada uma. Gerar custa crédito; a skill simula o custo antes.</p><pre><span class="c"># ferramentas de QA (opcional)</span>
+<div class="card"><h3>Uma plataforma com Seedance 2.5</h3><p>Magnific (MCP, padrêo), Higgsfield ou fal.ai. O app troca os cabeçalhos de parâmetro pra cada uma. Gerar custa crédito; a skill simula o custo antes.</p><pre><span class="c"># ferramentas de QA (opcional)</span>
 <span class="k">ffmpeg -version</span></pre></div>
 </div>
 </div></section>
@@ -186,18 +186,18 @@
 <h3>Escreva (ou gere) as 5 falas</h3>
 <p>Modo Template: você digita as falas nos 5 campos e o contador avisa se saiu da faixa de 70–80 palavras. Modo IA: o Claude escreve produto, creator, ações de beat, as 5 falas no idioma escolhido e 2–3 hooks alternativos.</p>
 <pre><span class="c"># exemplo de fala de hook (formato 07, teste de sabor)</span>
-<span class="s">"Todo energético diz que não sabe a remédio. Toda vez é mentira."</span></pre>
+<span class="s">"Todo energético diz que nêo sabe a remédio. Toda vez é mentira."</span></pre>
 </div></div>
 <div class="step"><div class="b">3</div><div>
 <h3>Copie os 3 prompts com os parâmetros da plataforma</h3>
-<p>Cada STEP tem botão de copiar e o cabeçalho de parâmetros do alvo escolhido. "Copiar brief completo" ou "Baixar .md" leva tudo de uma vez, com a checklist de QA.</p>
+<p>Cada STEP tem botêo de copiar e o cabeçalho de parâmetros do alvo escolhido. "Copiar brief completo" ou "Baixar .md" leva tudo de uma vez, com a checklist de QA.</p>
 <pre><span class="c"># STEP 3 na Magnific</span>
 video_generate · slug <span class="s">bytedance-seedance-pro-2.5</span> · 9:16 · 1080p · duration 30
 references[]: {type:<span class="s">'product'</span>, STEP 1} + {type:<span class="s">'character'</span>, STEP 2} · sem keyframes</pre>
 </div></div>
 <div class="step"><div class="b">4</div><div>
 <h3>Ou use a skill no Claude Code</h3>
-<p>A skill pergunta o que faltar no brief, escolhe o formato pelo produto, escreve os 3 prompts e salva um <code>brief.md</code>. Só executa na Magnific se você pedir, e sempre com simulação de custo antes.</p>
+<p>A skill pergunta o que faltar no brief, escolhe o formato pelo produto, escreve os 3 prompts e salva um <code>brief.md</code>. Só executa na Magnific se você pedir, e sempre com simulaçêo de custo antes.</p>
 <pre><span class="c"># instalar (symlink pro repo clonado)</span>
 <span class="k">ln -s</span> ~/projetos/ugc-seedance25/skill/ugc-seedance25 ~/.claude/skills/ugc-seedance25
 <span class="c"># usar</span>
@@ -206,13 +206,13 @@ references[]: {type:<span class="s">'product'</span>, STEP 1} + {type:<span clas
 </div></div>
 <div class="step"><div class="b">5</div><div>
 <h3>Gere com controle de custo: rascunho 720p, final 1080p</h3>
-<p>Na Magnific a skill roda <code>simulate_cost</code> e mostra o número antes de gerar. Depois: foto do produto, retrato do creator, rascunho em 720p, aprovação, final em 1080p. Voz em PT-BR saiu ruim? Gere no inemavox e passe como referência de áudio.</p>
+<p>Na Magnific a skill roda <code>simulate_cost</code> e mostra o número antes de gerar. Depois: foto do produto, retrato do creator, rascunho em 720p, aprovaçêo, final em 1080p. Voz em PT-BR saiu ruim? Gere no inemavox e passe como referência de áudio.</p>
 <pre><span class="c"># ordem fixa</span>
 simulate_cost → STEP 1 → STEP 2 → vídeo 720p → QA → vídeo 1080p</pre>
 </div></div>
 <div class="step"><div class="b">6</div><div>
-<h3>QA em frames congelados, não em vibe</h3>
-<p>Contact sheet 3×3 e checagem de espelho. Um produto só, no máximo duas mãos, rótulo legível e no sentido certo, rosto igual ao retrato, sem legenda embutida, produto visível antes de 3 s.</p>
+<h3>QA em frames congelados, nêo em vibe</h3>
+<p>Contact sheet 3×3 e checagem de espelho. Um produto só, no máximo duas mêos, rótulo legível e no sentido certo, rosto igual ao retrato, sem legenda embutida, produto visível antes de 3 s.</p>
 <pre><span class="k">ffmpeg</span> -y -i ad.mp4 -vf <span class="s">"fps=0.3,scale=360:-1,tile=3x3"</span> contact.png
 <span class="k">ffmpeg</span> -y -i ad.mp4 -vf hflip -c:a copy ad-fixed.mp4   <span class="c"># se o rótulo saiu espelhado</span></pre>
 </div></div>
@@ -222,9 +222,9 @@ simulate_cost → STEP 1 → STEP 2 → vídeo 720p → QA → vídeo 1080p</pre
 <tr><td>01</td><td>Classic Review</td><td>sérum, hidratante, cabelo</td><td>o hook soa como meio de história, nunca começo de anúncio</td></tr>
 <tr><td>02</td><td>Desk Confession</td><td>suplemento, café, produtividade</td><td>nunca cortar o beat de consumir na câmera</td></tr>
 <tr><td>03</td><td>Night Routine</td><td>gadget de beleza, tech de casa</td><td>uma piada autodepreciativa no meio da demo</td></tr>
-<tr><td>04</td><td>Unboxing</td><td>lançamento, embalagem premium</td><td>a caixa lacrada é o hook; revelação no meio</td></tr>
+<tr><td>04</td><td>Unboxing</td><td>lançamento, embalagem premium</td><td>a caixa lacrada é o hook; revelaçêo no meio</td></tr>
 <tr><td>05</td><td>Try-On</td><td>roupa, activewear, joia</td><td>tecido toca a lente; fecho de recompra</td></tr>
-<tr><td>06</td><td>Product-Only POV</td><td>cozinha, casa, papelaria</td><td>voz off casa com o que as mãos fazem</td></tr>
+<tr><td>06</td><td>Product-Only POV</td><td>cozinha, casa, papelaria</td><td>voz off casa com o que as mêos fazem</td></tr>
 <tr><td>07</td><td>Taste Test</td><td>comida, bebida, snack</td><td>cético-convertido; "Espera." depois do gole</td></tr>
 <tr><td>08</td><td>Bring Your Own (foto)</td><td>seu produto real</td><td>re-fotografar; nunca a foto crua no vídeo</td></tr>
 <tr><td>09</td><td>Screenshot-to-POV</td><td>print de loja, sem rosto</td><td>"ignore any website interface" ou herda botões</td></tr>
@@ -242,9 +242,9 @@ simulate_cost → STEP 1 → STEP 2 → vídeo 720p → QA → vídeo 1080p</pre
 <section id="roadmap"><div class="wrap">
 <span class="chip">Roadmap</span>
 <h2>O que existe e o que vem</h2>
-<p class="sub">Versão 1.0.0. O plano completo, com o mapeamento do pack pra Magnific e os riscos, está em <code>PLANO.md</code> no repo.</p>
+<p class="sub">Versêo 1.0.0. O plano completo, com o mapeamento do pack pra Magnific e os riscos, está em <code>PLANO.md</code> no repo.</p>
 <div class="phase"><div class="tag">Feito</div><div class="d"><strong>Skill + gerador de brief</strong><span>9 formatos, 5 beats, blocos fixos, alvos Magnific/Higgsfield/fal.ai, modo Template e modo IA (OAuth do Claude Code ou OpenRouter), QA em frames.</span></div></div>
-<div class="phase"><div class="tag">Medir</div><div class="d"><strong>Custo real do one-take 30 s 1080p na Magnific</strong><span>Só há medição de 5 s. A skill exige simulate_cost antes de gerar; o número entra no PLANO quando for medido.</span></div></div>
+<div class="phase"><div class="tag">Medir</div><div class="d"><strong>Custo real do one-take 30 s 1080p na Magnific</strong><span>Só há mediçêo de 5 s. A skill exige simulate_cost antes de gerar; o número entra no PLANO quando for medido.</span></div></div>
 <div class="phase"><div class="tag">Testar</div><div class="d"><strong>Lip-sync em PT-BR direto do prompt</strong><span>Fallback pronto: voz no inemavox como referência de áudio. Falta comparar os dois caminhos num anúncio real.</span></div></div>
 <div class="phase"><div class="tag">Depois</div><div class="d"><strong>Série de variantes</strong><span>Mesma foto do produto, hook e creator novos, duas por semana. Lote com QA automática de contact sheet.</span></div></div>
 </div></section>
