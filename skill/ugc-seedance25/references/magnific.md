@@ -8,7 +8,7 @@ Catálogo e custos gerais: `~/.claude/runbooks/magnific-modelos.md`. Aqui só o 
 |---|---|---|
 | STEP 1 produto | `gpt_image_2`, quality high, 3:4 | `images_generate` · `mode: gpt-2` (15 cr, texto legível) · aspect 3:4. Fidelidade máxima de marca: `seedream-5-pro` (100 cr) |
 | STEP 1 com foto/print | upload + gpt_image_2 com referência | `images_generate` com `references[]` `type: product` (ou `image`) apontando pro upload, `mode: gpt-2` ou `imagen-nano-banana-2` (ediçêo guiada) |
-| STEP 2 creator | `soul_2`, 3:4, 2k | `images_generate` · `mode: flux-2-klein` (10 cr, default INEMA) · 3:4. Se ficar "retocado", `seedream-5-pro` |
+| STEP 2 creator | `soul_2`, 3:4, 2k | `images_generate` · `mode: flux-2-klein` (10 cr, default ARCKHÉ) · 3:4. Se ficar "retocado", `seedream-5-pro` |
 | STEP 3 vídeo | `seedance_2_5`, `omni_reference`, 9:16, 1080p, 30 s, audio | `video_generate` · `slug: bytedance-seedance-pro-2.5` · `aspectRatio: "9:16"` · `resolution: "720p"` (rascunho) / `"1080p"` (final) · `duration: 30` · `references: [{type:"product", …STEP 1}, {type:"character", …STEP 2}]` · **sem `keyframes`** (proibido junto com references) |
 | voz externa | (nêo existe no pack) | `references[]` `type: audio`, mp3/wav, 2–30 s, ≤ 15 MB; serve pra lipsync/voiceover_sync |
 

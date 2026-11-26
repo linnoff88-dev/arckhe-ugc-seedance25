@@ -1,15 +1,15 @@
-# INEMA · UGC Seedance 2.5
+# ARCKHÉ · UGC Seedance 2.5
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
 Anuncios UGC (creador hablando a la cámara del celular, one-take de 30 s, 9:16, 1080p) con Seedance 2.5, a
 partir del pack "The Seedance 2.5 UGC Ads Pack" (Zubair Trabzada · AI Workshop, 2026), adaptado
-al ecosistema INEMA (Magnific MCP como objetivo principal; Higgsfield y fal.ai como secundarios).
+al ecosistema ARCKHÉ (Magnific MCP como objetivo principal; Higgsfield y fal.ai como secundarios).
 
 ## 📖 Guía de uso
 
-Guía completa (landing + paso a paso): **https://inematds.github.io/ugc-seedance25/guia/es/**
-App en línea (modo Template): https://inematds.github.io/ugc-seedance25/app/public/
+Guía completa (landing + paso a paso): **https://linnoff88-dev.github.io/arckhe-/guia/es/**
+App en línea (modo Template): https://linnoff88-dev.github.io/arckhe-/app/public/
 
 Dos entregables que comparten el mismo contenido:
 
@@ -22,7 +22,7 @@ ugc-seedance25/
 │   ├── SKILL.md              brief → 3 prompts → brief.md → (opcional) Magnific con gate de costo → QA
 │   └── references/           regras.md · formatos.md · ptbr.md · magnific.md
 └── app/                      generador de brief (web) — estándar seedance2/app
-    ├── public/index.html     single-page, INEMA dark ámbar, vanilla JS
+    ├── public/index.html     single-page, ARCKHÉ dark ámbar, vanilla JS
     ├── public/formats.js     fuente única: 9 formatos, beats, bloques fijos, objetivos, reglas
     ├── api/generate.ts       función serverless — modo IA (uso de herramientas forzado)
     ├── api/llm-client.ts     cliente unificado: Claude OAuth (predeterminado) · OpenRouter · Anthropic API
@@ -44,7 +44,7 @@ Instalada mediante symlink. Activadores: "anúncio ugc", "ugc ad", "seedance ugc
 - Siempre genera `~/projetos/output/ugc-seedance25/<slug>/brief.md` con los 3 prompts.
 - Solo ejecuta en Magnific si lo pides: `simulate_cost` → producto → creador → borrador 720p →
   QA en fotogramas (contact sheet, verificación del espejo) → final 1080p.
-- Frases en PT-BR de forma predeterminada; alternativa de voz vía inemavox → referencia de audio.
+- Frases en PT-BR de forma predeterminada; alternativa de voz vía ARCKHÉvox → referencia de audio.
 
 ## App
 

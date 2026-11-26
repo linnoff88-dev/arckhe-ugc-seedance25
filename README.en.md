@@ -1,15 +1,15 @@
-# INEMA · UGC Seedance 2.5
+# ARCKHÉ · UGC Seedance 2.5
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
 UGC ads (creator speaking to their phone, 30-second one-take, 9:16, 1080p) with Seedance 2.5,
 based on the “The Seedance 2.5 UGC Ads Pack” (Zubair Trabzada · AI Workshop, 2026), adapted
-for the INEMA ecosystem (Magnific MCP as the primary target; Higgsfield and fal.ai as secondary options).
+for the ARCKHÉ ecosystem (Magnific MCP as the primary target; Higgsfield and fal.ai as secondary options).
 
 ## 📖 User Guide
 
-Complete guide (landing page + step-by-step instructions): **https://inematds.github.io/ugc-seedance25/guia/en/**
-Online app (Template mode): https://inematds.github.io/ugc-seedance25/app/public/
+Complete guide (landing page + step-by-step instructions): **https://linnoff88-dev.github.io/arckhe-/guia/en/**
+Online app (Template mode): https://linnoff88-dev.github.io/arckhe-/app/public/
 
 Two deliverables that share the same content:
 
@@ -22,7 +22,7 @@ ugc-seedance25/
 │   ├── SKILL.md              brief → 3 prompts → brief.md → (optional) Magnific with cost gate → QA
 │   └── references/           regras.md · formatos.md · ptbr.md · magnific.md
 └── app/                      brief generator (web) — based on seedance2/app
-    ├── public/index.html     single-page, INEMA dark amber, vanilla JS
+    ├── public/index.html     single-page, ARCKHÉ dark amber, vanilla JS
     ├── public/formats.js     single source: 9 formats, beats, fixed blocks, targets, rules
     ├── api/generate.ts       serverless function — AI mode (forced tool use)
     ├── api/llm-client.ts     unified client: Claude OAuth (default) · OpenRouter · Anthropic API
@@ -44,7 +44,7 @@ Installed via symlink. Triggers: “ugc ad”, “ugc ad”, “seedance ugc”,
 - Always generates `~/projetos/output/ugc-seedance25/<slug>/brief.md` with the 3 prompts.
 - Only runs in Magnific if you ask: `simulate_cost` → product → creator → 720p draft →
   frame QA (contact sheet, mirror check) → 1080p final.
-- Lines in PT-BR by default; voice fallback via inemavox → audio reference.
+- Lines in PT-BR by default; voice fallback via ARCKHÉvox → audio reference.
 
 ## App
 

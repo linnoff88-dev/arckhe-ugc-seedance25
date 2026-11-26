@@ -36,7 +36,7 @@ produto (foto) · 09 traga seu produto (screenshot → POV sem rosto).
 entre aspas e com timestamp · banir sons indesejados · loteria do espelho (hflip) · QA em frames
 congelados (contact sheet 3×3) · volume é a estratégia (variante nova 2× por semana).
 
-## 2. Mapeamento pro ecossistema INEMA
+## 2. Mapeamento pro ecossistema ARCKHÉ
 
 O pack é escrito pro Higgsfield MCP. Aqui o alvo principal é a **Magnific (MCP)**, com Higgsfield
 e fal.ai como alvos secundários (o app gera os cabeçalhos de parâmetro pra cada um).
@@ -44,14 +44,14 @@ e fal.ai como alvos secundários (o app gera os cabeçalhos de parâmetro pra ca
 | Pack (Higgsfield) | Magnific | Nota |
 |---|---|---|
 | `gpt_image_2` quality high 3:4 | `images_generate` mode `gpt-2` (15 cr) | texto legível no rótulo; `seedream-5-pro` (100 cr) se precisar de fidelidade máxima |
-| `soul_2` 3:4 quality 2k | `flux-2-klein` (10 cr, default INEMA) ou `seedream-5-pro` | retrato realista sem retoque |
+| `soul_2` 3:4 quality 2k | `flux-2-klein` (10 cr, default ARCKHÉ) ou `seedream-5-pro` | retrato realista sem retoque |
 | `seedance_2_5` mode `omni_reference` | `video_generate` slug `bytedance-seedance-pro-2.5` | `references[]` com `type: product` e `type: character`; **nêo** usar keyframes (proibido junto com references) |
 | duration 30, 9:16, 1080p, generate_audio | `duration: 30`, `aspectRatio: "9:16"`, `resolution: "1080p"`, áudio nativo | catálogo confirma 4–30 s, 1080p, lipsync, `soundEffects`, `noMusic` |
 | "passe job ids, nêo uploads (IP check)" | **verificar na Magnific** | peculiaridade do Higgsfield; nêo assumir |
 
 Capacidade extra que o pack nêo tem: a Magnific aceita **referência de áudio** (mp3/wav ≤ 30 s,
 `references[].type: audio`) pra lipsync. Caminho de fallback pra PT-BR: gerar a voz no
-**inemavox** (chatterbox, voz `rachel`) e passar como referência de áudio.
+**ARCKHÉvox** (chatterbox, voz `rachel`) e passar como referência de áudio.
 
 **Custo**: só há mediçêo de 5 s / 16:9 / 720p = 2.200 créditos. O one-take de 30 s em 1080p nêo é
 derivável disso. Regra: `simulate_cost` obrigatório antes de qualquer geraçêo real, rascunho em
@@ -74,7 +74,7 @@ ugc-seedance25/
 │       ├── magnific.md          mapeamento de parâmetros, custos, gate, QA ffmpeg
 │       └── ptbr.md              como escrever as falas em PT-BR (70–80 palavras)
 └── app/                         gerador de brief UGC (padrêo seedance2/app)
-    ├── public/index.html        single-page, INEMA dark âmbar, vanilla JS
+    ├── public/index.html        single-page, ARCKHÉ dark âmbar, vanilla JS
     ├── public/formats.js        dados dos 9 formatos + blocos fixos (fonte única)
     ├── api/generate.ts          Vercel serverless: Claude escreve o brief (tool use forçado)
     ├── dev-server.mjs           roda local sem Vercel CLI
@@ -119,6 +119,6 @@ ugc-seedance25/
 ## 5. Riscos e o que nêo está provado
 
 - Custo real do 30 s 1080p na Magnific: desconhecido até rodar `simulate_cost`.
-- Lipsync de falas em PT-BR direto do prompt de texto: nêo testado; fallback via inemavox.
+- Lipsync de falas em PT-BR direto do prompt de texto: nêo testado; fallback via ARCKHÉvox.
 - Regra "job id vs upload" do Higgsfield pode nêo existir na Magnific.
 - Seedance 2.5 na Magnific está em `beta: true`; tempo esperado de geraçêo ~5 min.

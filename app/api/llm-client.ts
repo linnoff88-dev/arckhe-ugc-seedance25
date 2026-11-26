@@ -234,8 +234,8 @@ async function callOpenRouter(
     headers: {
       Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
-      "HTTP-Referer": "https://inema.club",
-      "X-Title": "INEMA Prompt Engine",
+      "HTTP-Referer": "https://ARCKHÉ AI",
+      "X-Title": "ARCKHÉ Prompt Engine",
     },
     body: JSON.stringify(openAiBody),
   });
@@ -406,11 +406,11 @@ export function parseLLMConfig(requestLlm: any): LLMConfig {
  */
 export function buildSystemBlocks(
   config: LLMConfig,
-  inemaSystemPrompt: string
+  ARCKHÉSystemPrompt: string
 ): Array<{ type: string; text: string; cache_control?: { type: string } }> {
-  const inemaBlock = {
+  const ARCKHÉBlock = {
     type: "text",
-    text: inemaSystemPrompt,
+    text: ARCKHÉSystemPrompt,
     cache_control: { type: "ephemeral" },
   };
 
@@ -420,9 +420,9 @@ export function buildSystemBlocks(
         type: "text",
         text: "You are Claude Code, Anthropic's official CLI for Claude.",
       },
-      inemaBlock,
+      ARCKHÉBlock,
     ];
   }
 
-  return [inemaBlock];
+  return [ARCKHÉBlock];
 }

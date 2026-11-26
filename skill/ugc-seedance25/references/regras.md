@@ -28,8 +28,8 @@ Uma linha por beat, timestamps `0-4s / 4-11s / 11-18s / 18-25s / 25-30s`.
 
 ## Bloco de realismo (obrigatório)
 
-Rosto: `Realism: pore-level natural skin texture, {luz}, authentic amateur framing, no beauty filter, no cinematic grade, no on-screen text.`
-POV: `Realism: real hand and skin detail, {luz}, authentic amateur POV framing, no cinematic grade, no on-screen text.`
+Rosto: `Realism: pore-level natural skin texture, {luz}, authentic amateur framing, no beauty filter, no cARCKHÉtic grade, no on-screen text.`
+POV: `Realism: real hand and skin detail, {luz}, authentic amateur POV framing, no cARCKHÉtic grade, no on-screen text.`
 
 Luz = a mesma do STEP 2: flat daylight · everyday apartment daylight · warm cozy lamp light · neutral daylight · natural daylight · bright kitchen daylight.
 

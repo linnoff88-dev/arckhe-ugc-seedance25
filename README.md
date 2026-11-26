@@ -1,4 +1,4 @@
-ï»¿# INEMA êÂ· UGC Seedance 2.5
+ï»¿# ARCKHÉ êÂ· UGC Seedance 2.5
 
 <div align="center">
   <img src="capa/logo.svg" alt="Arckhé AI" height="48" />
@@ -10,12 +10,12 @@
 
 AnêÂºncios UGC (creator falando pro celular, one-take de 30 s, 9:16, 1080p) com Seedance 2.5, a
 partir do pack "The Seedance 2.5 UGC Ads Pack" (Zubair Trabzada êÂ· AI Workshop, 2026), adaptado
-pro ecossistema INEMA (Magnific MCP como alvo principal; Higgsfield e fal.ai como secundêÂ¡rios).
+pro ecossistema ARCKHÉ (Magnific MCP como alvo principal; Higgsfield e fal.ai como secundêÂ¡rios).
 
 ## ê°Å¸ââ Guia de uso
 
-Guia completo (landing + passo a passo): **https://inematds.github.io/ugc-seedance25/guia/**
-App online (modo Template): https://inematds.github.io/ugc-seedance25/app/public/
+Guia completo (landing + passo a passo): **https://linnoff88-dev.github.io/arckhe-/guia/**
+App online (modo Template): https://linnoff88-dev.github.io/arckhe-/app/public/
 
 Duas entregas que compartilham o mesmo conteêÂºdo:
 
@@ -28,7 +28,7 @@ ugc-seedance25/
 ê¢ââ   ê¢âÅê¢ââ¬ê¢ââ¬ SKILL.md              brief ê¢â â 3 prompts ê¢â â brief.md ê¢â â (opcional) Magnific com gate de custo ê¢â â QA
 ê¢ââ   ê¢ââê¢ââ¬ê¢ââ¬ references/           regras.md êÂ· formatos.md êÂ· ptbr.md êÂ· magnific.md
 ê¢ââê¢ââ¬ê¢ââ¬ app/                      gerador de brief (web) ê¢â¬â padrêÂ£o seedance2/app
-    ê¢âÅê¢ââ¬ê¢ââ¬ public/index.html     single-page, INEMA dark êÂ¢mbar, vanilla JS
+    ê¢âÅê¢ââ¬ê¢ââ¬ public/index.html     single-page, ARCKHÉ dark êÂ¢mbar, vanilla JS
     ê¢âÅê¢ââ¬ê¢ââ¬ public/formats.js     fonte êÂºnica: 9 formatos, beats, blocos fixos, alvos, regras
     ê¢âÅê¢ââ¬ê¢ââ¬ api/generate.ts       funêÂ§êÂ£o serverless ê¢â¬â modo IA (tool use forêÂ§ado)
     ê¢âÅê¢ââ¬ê¢ââ¬ api/llm-client.ts     cliente unificado: Claude OAuth (padrêÂ£o) êÂ· OpenRouter êÂ· Anthropic API
@@ -50,7 +50,7 @@ Instalada por symlink. Gatilhos: "anêÂºncio ugc", "ugc ad", "seedance ugc",
 - Sempre gera `~/projetos/output/ugc-seedance25/<slug>/brief.md` com os 3 prompts.
 - SêÂ³ executa na Magnific se vocêÂª pedir: `simulate_cost` ê¢â â produto ê¢â â creator ê¢â â rascunho 720p ê¢â â
   QA em frames (contact sheet, checagem de espelho) ê¢â â final 1080p.
-- Falas em PT-BR por padrêÂ£o; fallback de voz via inemavox ê¢â â referêÂªncia de êÂ¡udio.
+- Falas em PT-BR por padrêÂ£o; fallback de voz via ARCKHÉvox ê¢â â referêÂªncia de êÂ¡udio.
 
 ## App
 

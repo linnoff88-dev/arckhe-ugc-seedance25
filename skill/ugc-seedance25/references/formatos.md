@@ -34,7 +34,7 @@ STEP 3:
 11-18s: opens the jar, pops one gummy in his mouth, chews, nods: 'They actually taste good, which... surprised me.'
 18-25s: gestures back at the laptop, jar still in hand: 'No jitters, no crash. I've cleared my whole list before lunch every day this week.'
 25-30s: leans in slightly, taps the lid: 'Just run it for one week. That's all I'm saying.'
-Realism: real skin texture with stubble detail, everyday apartment daylight, authentic amateur framing, no beauty filter, no cinematic grade, no on-screen text.
+Realism: real skin texture with stubble detail, everyday apartment daylight, authentic amateur framing, no beauty filter, no cARCKHÉtic grade, no on-screen text.
 AUDIO: his real voice lip-synced exactly to the quoted lines, relaxed low-key delivery, dry quiet apartment room tone, field-recording quality; no music, no water droplets, no bubbles, no synthesized blips."
 
 ## Hooks dos outros formatos (referência de registro)

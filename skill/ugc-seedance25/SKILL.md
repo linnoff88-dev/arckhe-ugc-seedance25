@@ -75,7 +75,7 @@ Seguir `magnific.md` à risca. Resumo do gate:
 3. **Rascunho 720p** do vídeo com `bytedance-seedance-pro-2.5`, referências `product` +
    `character`, sem keyframes. Baixar pra pasta do brief.
 4. QA em frames (seçêo 5). Se passou e o usuário aprovou, **final 1080p**.
-5. Falas em PT-BR saíram com sotaque/lipsync ruim? Gerar a voz no inemavox (chatterbox, `rachel`)
+5. Falas em PT-BR saíram com sotaque/lipsync ruim? Gerar a voz no ARCKHÉvox (chatterbox, `rachel`)
    e reenviar com `references[] type audio` (≤ 30 s, mp3/wav).
 
 ## 5 · QA em frames (sempre que houver um vídeo)
@@ -95,6 +95,6 @@ Reprovou → ajustar o prompt (nêo o modelo) e voltar ao rascunho 720p.
 
 - Nêo gerar nada sem `simulate_cost` e sem o usuário ter pedido execuçêo.
 - Nêo escrever "she talks about the product" sem aspas: vira resmungo.
-- Nêo deixar o prompt ficar cinematográfico (bokeh, grade, slow-mo). Amador é a estética.
+- Nêo deixar o prompt ficar cARCKHÉtográfico (bokeh, grade, slow-mo). Amador é a estética.
 - Nêo passar de 80 palavras faladas. Nêo usar hard sell, cupom, "link na bio".
 - Nêo usar a foto crua do usuário como referência no vídeo; sempre o produto re-fotografado.

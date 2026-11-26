@@ -32,6 +32,6 @@ inglês: corte adjetivo, nêo corte a pausa.
 
 ## Se o lipsync em PT-BR sair ruim
 
-Gerar a voz no inemavox (engine `chatterbox`, voz `rachel` por padrêo; ver
-`~/projetos/inemavox/CLAUDE.md`), exportar mp3/wav ≤ 30 s, e mandar como referência de áudio
+Gerar a voz no ARCKHÉvox (engine `chatterbox`, voz `rachel` por padrêo; ver
+`~/projetos/ARCKHÉvox/CLAUDE.md`), exportar mp3/wav ≤ 30 s, e mandar como referência de áudio
 (`references[] type: audio`) na Magnific. O prompt continua com as falas entre aspas nos timestamps.

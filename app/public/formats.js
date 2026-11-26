@@ -1,4 +1,4 @@
-// Fonte única de conteúdo do pack "Seedance 2.5 UGC Ads" adaptado pro ecossistema INEMA.
+// Fonte única de conteúdo do pack "Seedance 2.5 UGC Ads" adaptado pro ecossistema ARCKHÉ.
 // Usado pelo front (modo Template) e pela funçêo serverless (system prompt do modo IA).
 // Prompts ficam em inglês (o modelo lê melhor); as FALAS vêo no idioma escolhido pelo usuário.
 
@@ -16,8 +16,8 @@ export const WORDS_MIN = 70;
 export const WORDS_MAX = 80;
 
 export const REALISM = {
-  face: "Realism: pore-level natural skin texture, {light}, authentic amateur framing, no beauty filter, no cinematic grade, no on-screen text.",
-  pov: "Realism: real hand and skin detail, {light}, authentic amateur POV framing, no cinematic grade, no on-screen text.",
+  face: "Realism: pore-level natural skin texture, {light}, authentic amateur framing, no beauty filter, no cARCKHÉtic grade, no on-screen text.",
+  pov: "Realism: real hand and skin detail, {light}, authentic amateur POV framing, no cARCKHÉtic grade, no on-screen text.",
 };
 
 export const AUDIO = {
@@ -38,7 +38,7 @@ export const TARGETS = {
     step1: "images_generate · mode gpt-2 (rótulo legível; seedream-5-pro se precisar de fidelidade máxima) · 3:4",
     step2: "images_generate · mode flux-2-klein (ou seedream-5-pro) · 3:4",
     step3: "video_generate · slug bytedance-seedance-pro-2.5 · aspectRatio 9:16 · resolution 1080p (rascunho: 720p) · duration 30 · references[]: {type:'product', image do STEP 1} + {type:'character', image do STEP 2} · sem keyframes",
-    note: "Rodar simulate_cost antes de gerar. Custo do 30 s 1080p ainda nêo medido (5 s/720p/16:9 = 2.200 cr). Fallback de voz PT-BR: inemavox → references[] type audio.",
+    note: "Rodar simulate_cost antes de gerar. Custo do 30 s 1080p ainda nêo medido (5 s/720p/16:9 = 2.200 cr). Fallback de voz PT-BR: ARCKHÉvox → references[] type audio.",
   },
   higgsfield: {
     name: "Higgsfield (MCP)",
@@ -301,7 +301,7 @@ export const FORMATS = [
 
 export const RULES = [
   { n: 1, title: "Produto em quadro nos 3 primeiros segundos", body: "Roteirize o produto subindo pro quadro durante a fala do hook, nunca depois." },
-  { n: 2, title: "Escreva o bloco de realismo ou vira AI-slop", body: "Sem 'pore-level skin texture, flat daylight, amateur framing, no beauty filter, no cinematic grade' você ganha pele de cera e bokeh laranja-azul. Amador é a estética." },
+  { n: 2, title: "Escreva o bloco de realismo ou vira AI-slop", body: "Sem 'pore-level skin texture, flat daylight, amateur framing, no beauty filter, no cARCKHÉtic grade' você ganha pele de cera e bokeh laranja-azul. Amador é a estética." },
   { n: 3, title: "Toda fala entre aspas, com timestamp", body: "'Ela fala do produto' sem aspas gera resmungo. 70–80 palavras é o teto pra 30 s." },
   { n: 4, title: "Proíba os sons que nêo quer", body: "Termine o bloco de áudio com a lista curta: no music, no water droplets, no bubbles, no synthesized blips. Lista curta; prompt longo demais começa a falhar." },
   { n: 5, title: "Espere a loteria do espelho", body: "Alguns takes saem espelhados como câmera frontal real. É consistente no clipe: um hflip no ffmpeg corrige tudo. Cheque o rótulo antes de entregar." },

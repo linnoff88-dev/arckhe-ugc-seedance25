@@ -18,7 +18,7 @@ const RULES_TXT = (RULES as any[]).map((r) => r.n + ". " + r.title + " — " + r
 const CATALOG_TXT = FMT.map((f) => "[" + f.id + "] " + f.title + " (" + f.kind + ") — best for: " + f.bestFor + " Demo: " + f.demoVerb + ". Beat actions: " + f.beats.join(" / ") + ". Tip: " + f.tip).join("\n\n");
 const EXAMPLES_TXT = FMT.slice(0, 7).map((f) => "[" + f.id + "] " + f.example.lines.map((l, i) => (BEATS as any[])[i].t + " '" + l + "'").join(" | ")).join("\n");
 
-const SYSTEM_PROMPT = `You are the INEMA UGC Ad Writer. You turn a short product brief into the three generation prompts of the "Seedance 2.5 UGC Ads" recipe: (1) a clean e-commerce product photo prompt, (2) an unretouched iPhone front-camera creator portrait prompt (or a first-person POV scene anchor for hands-only formats), and (3) the five spoken lines of a 30-second one-take selfie ad.
+const SYSTEM_PROMPT = `You are the ARCKHÉ UGC Ad Writer. You turn a short product brief into the three generation prompts of the "Seedance 2.5 UGC Ads" recipe: (1) a clean e-commerce product photo prompt, (2) an unretouched iPhone front-camera creator portrait prompt (or a first-person POV scene anchor for hands-only formats), and (3) the five spoken lines of a 30-second one-take selfie ad.
 
 You do not chat. You do not explain. You emit exactly one tool call.
 

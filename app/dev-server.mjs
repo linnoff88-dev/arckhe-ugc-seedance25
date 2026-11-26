@@ -84,7 +84,7 @@ http.createServer((req, res) => {
   if (req.method === "GET") return serveStatic(req, res);
   res.writeHead(405); res.end();
 }).listen(PORT, () => {
-  console.log(`\n  🎬 INEMA · UGC Seedance 2.5 — dev server`);
+  console.log(`\n  🎬 ARCKHÉ · UGC Seedance 2.5 — dev server`);
   console.log(`  Local:  http://localhost:${PORT}`);
   console.log(`  API:    POST /api/generate  (modo IA; precisa de ANTHROPIC_API_KEY no .env)`);
   console.log(`  Modo Template funciona sem chave.\n`);
